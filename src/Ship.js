@@ -1,8 +1,13 @@
-function ship(startingPort, setSail) {
-  this.startingPort = 'Dover';
+const Port = require('../src/Port.js');
+
+function ship(currentPort, setSail) {
+  this.currentPort = Port;
   this.setSail = function () {
-    this.startingPort = null;
-  };
-}
+    this.currentPort = null;
+  },
+  dock(port) {
+   this.currentPort = port; 
+  },
+};
 
 module.exports = ship;
